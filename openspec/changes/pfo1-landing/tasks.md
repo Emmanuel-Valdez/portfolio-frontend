@@ -20,13 +20,13 @@
 
 ## 3. CSS y animaciones
 
-- [ ] 3.1 Crear `styles.css` con variables CSS `ev_`.
-- [ ] 3.2 Aplicar reset mínimo y estilos base.
-- [ ] 3.3 Maquetar header/nav/footer con Flexbox.
-- [ ] 3.4 Maquetar habilidades y timeline con Grid.
-- [ ] 3.5 Implementar animación `@keyframes blink` para cursor `ev_`.
-- [ ] 3.6 Implementar hover lift en tarjetas.
-- [ ] 3.7 Agregar media queries para responsive mobile-first.
+- [x] 3.1 Crear `styles.css` con variables CSS `ev_`.
+- [x] 3.2 Aplicar reset mínimo y estilos base.
+- [x] 3.3 Maquetar header/nav/footer con Flexbox.
+- [x] 3.4 Maquetar habilidades y timeline con Grid.
+- [x] 3.5 Implementar animación `@keyframes blink` para cursor `ev_`.
+- [x] 3.6 Implementar hover lift en tarjetas.
+- [x] 3.7 Agregar media queries para responsive mobile-first.
 - [ ] 3.8 Commitear `styles.css`.
 
 ## 4. README y declaración de IA
