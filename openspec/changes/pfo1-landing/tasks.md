@@ -31,9 +31,9 @@
 
 ## 4. README y declaración de IA
 
-- [ ] 4.1 Crear `README.md` con descripción PFO1, URL Vercel (placeholder) y decisiones.
-- [ ] 4.2 Redactar declaración de IA: hy3, ox alpha (gratis), Kimi Code (pago), sin Claude.
-- [ ] 4.3 Incluir enlace al perfil de GitHub.
+- [x] 4.1 Crear `README.md` con descripción PFO1, URL Vercel (placeholder) y decisiones.
+- [x] 4.2 Redactar declaración de IA: hy3, ox alpha (gratis), Kimi Code (pago), sin Claude.
+- [x] 4.3 Incluir enlace al perfil de GitHub.
 - [ ] 4.4 Commitear `README.md`.
 
 ## 5. Deploy en Vercel
