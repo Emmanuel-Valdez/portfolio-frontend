@@ -6,15 +6,14 @@ Landing estática personal para la entrega individual PFO1. Construida con HTML 
 
 ## Ver en línea
 
-> URL de Vercel: `https://<pendiente>.vercel.app`
->
-> Se actualizará tras el deploy en la Fase F.
+> URL de Vercel: https://portfolio-frontend-7tfy5hpbc-emmanuels-projects-0c629d54.vercel.app/
 
 ## Estructura
 
-- `index.html` — landing semántica con ARIA, skip-link y comentarios explicativos.
-- `styles.css` — variables `ev_`, Flexbox + Grid, animación `@keyframes blink`, responsive mobile-first.
-- `public/` — `favicon.svg` e `Emma.png`.
+- `public/index.html` — landing semántica con ARIA, skip-link y comentarios explicativos.
+- `public/styles.css` — variables `ev_`, Flexbox + Grid, animación `@keyframes blink`, responsive mobile-first.
+- `public/favicon.svg` — favicon `ev_`.
+- `public/Emma.png` — foto de perfil.
 
 ## Decisiones
 
