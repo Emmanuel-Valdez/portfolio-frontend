@@ -1,0 +1,28 @@
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local tooling (not part of the deliverable)
+# openspec/ se commitea a propósito como trazabilidad del proceso.
+# .kimi-code/ y .opencode/ quedan ignorados: pueden contener datos de sesión.
+.opencode/
+.kimi-code/
+
+# Build / deps
+node_modules/
+dist/
+.env
+
+# Planning / context files that stay local
+PROJECT_CONTEXT.md
+PLAN.md
+
+# consigna.md is kept in the repo as part of the deliverable
