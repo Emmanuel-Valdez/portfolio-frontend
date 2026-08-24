@@ -10,12 +10,12 @@
 
 ## 2. HTML semántico
 
-- [ ] 2.1 Crear `index.html` con DOCTYPE, meta viewport y lang="es".
-- [ ] 2.2 Estructurar `header`/`nav`/`main`/`footer` con roles ARIA.
-- [ ] 2.3 Agregar skip-link, favicon `ev_` y Google Fonts Onest.
-- [ ] 2.4 Crear secciones: Sobre mí, Habilidades, Mi camino, Contacto.
-- [ ] 2.5 Implementar formulario con labels y `action="mailto:contact@evaldez.ar"`.
-- [ ] 2.6 Incluir al menos 4 comentarios explicativos en el HTML.
+- [x] 2.1 Crear `index.html` con DOCTYPE, meta viewport y lang="es".
+- [x] 2.2 Estructurar `header`/`nav`/`main`/`footer` con roles ARIA.
+- [x] 2.3 Agregar skip-link, favicon `ev_` y Google Fonts Onest.
+- [x] 2.4 Crear secciones: Sobre mí, Habilidades, Mi camino, Contacto.
+- [x] 2.5 Implementar formulario con labels y `action="mailto:contact@evaldez.ar"`.
+- [x] 2.6 Incluir al menos 4 comentarios explicativos en el HTML.
 - [ ] 2.7 Commitear `index.html`.
 
 ## 3. CSS y animaciones

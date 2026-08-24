@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ev_ · Emmanuel Valdez</title>
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Enlace para saltar la navegación y llegar directo al contenido principal -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Cabecera: marca ev_ con cursor parpadeante y navegación principal -->
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <a href="#inicio" aria-label="Inicio">
+        ev_<span class="cursor" aria-hidden="true">_</span>
+      </a>
+    </div>
+    <nav class="site-nav" role="navigation" aria-label="Principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#camino">Camino</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal: inicia después del encabezado -->
+  <main id="main-content" role="main">
+
+    <!-- Sección de inicio / hero -->
+    <section id="inicio" class="hero">
+      <h1>ev_<span class="cursor" aria-hidden="true">_</span> Emmanuel Valdez</h1>
+      <p class="lead">Estudiante de Desarrollo de Sistemas Web · Aprendiendo en público</p>
+    </section>
+
+    <!-- Sección Sobre mí: foto y biografía honesta -->
+    <section id="sobre-mi" class="about">
+      <h2>Sobre mí</h2>
+      <div class="about-content">
+        <img src="public/Emma.png" alt="Foto de Emmanuel Valdez, estudiante de desarrollo web" width="320" height="320" loading="lazy" />
+        <div class="about-text">
+          <p>
+            Empecé a programar en 2021 con Java, curioseando por mi cuenta y haciendo pequeños proyectos.
+            Después hice cursos de desarrollo fullstack y seguí con React. Hoy estoy en el 4to semestre de la
+            Tecnicatura en Desarrollo de Sistemas Web.
+          </p>
+          <p>
+            Esta landing es la PFO1 de Front End. La armé con ayuda de agentes de IA (Kimi Code, hy3 y ox alpha)
+            y revisé el resultado con mi criterio para mantener una voz honesta: no me vendo como profesional,
+            solo muestro por dónde voy aprendiendo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Habilidades: grilla de tarjetas con tecnologías reales -->
+    <section id="habilidades" class="skills">
+      <h2>Habilidades</h2>
+      <div class="skills-grid">
+        <article class="skill-card">HTML</article>
+        <article class="skill-card">CSS</article>
+        <article class="skill-card">Flexbox / Grid</article>
+        <article class="skill-card">Responsive</article>
+        <article class="skill-card">Java</article>
+        <article class="skill-card">JavaScript</article>
+        <article class="skill-card">React</article>
+        <article class="skill-card">Fullstack</article>
+        <article class="skill-card">ASP.NET</article>
+        <article class="skill-card">PostgreSQL</article>
+        <article class="skill-card">Docker</article>
+        <article class="skill-card">Git / GitHub</article>
+      </div>
+    </section>
+
+    <!-- Sección Mi camino de aprendizaje: timeline personal 2021-2026 -->
+    <section id="camino" class="timeline">
+      <h2>Mi camino de aprendizaje</h2>
+      <ol class="timeline-list">
+        <li class="timeline-item">
+          <time datetime="2021">2021</time>
+          <p>Primeros pasos programando con Java.</p>
+        </li>
+        <li class="timeline-item">
+          <time datetime="2022">2022</time>
+          <p>Cursos de desarrollo web fullstack.</p>
+        </li>
+        <li class="timeline-item">
+          <time datetime="2023">2023</time>
+          <p>Profundicé en React y proyectos personales.</p>
+        </li>
+        <li class="timeline-item">
+          <time datetime="2024">2024</time>
+          <p>Ingreso a la Tecnicatura en Desarrollo de Sistemas Web.</p>
+        </li>
+        <li class="timeline-item">
+          <time datetime="2025">2025</time>
+          <p>3er semestre, práctica con bases de datos y APIs.</p>
+        </li>
+        <li class="timeline-item">
+          <time datetime="2026">2026</time>
+          <p>4to semestre + PFO1 armada con agentes de IA.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Sección Contacto: formulario accesible sin backend -->
+    <section id="contacto" class="contact">
+      <h2>Contacto</h2>
+      <p>Si querés escribirme, completá el formulario. Se abrirá tu cliente de correo.</p>
+      <form action="mailto:contact@evaldez.ar" method="post" enctype="text/plain">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Pie de página: enlace visible a GitHub, año y firma -->
+  <footer class="site-footer" role="contentinfo">
+    <p>
+      <a href="https://github.com/Emmanuel-Valdez" target="_blank" rel="noopener noreferrer">GitHub: Emmanuel-Valdez</a>
+      · 2026 · ev_<span aria-hidden="true">_</span>
+    </p>
+  </footer>
+</body>
+</html>
