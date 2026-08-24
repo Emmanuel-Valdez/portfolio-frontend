@@ -6,7 +6,7 @@ Landing estática personal para la entrega individual PFO1. Construida con HTML 
 
 ## Ver en línea
 
-> URL de Vercel: https://portfolio-frontend-7tfy5hpbc-emmanuels-projects-0c629d54.vercel.app/
+> URL de Vercel: https://portfolio-frontend-orcin-xi.vercel.app/
 
 ## Estructura
 
