@@ -34,6 +34,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
 }
 
 body {
@@ -106,6 +107,19 @@ section {
 .skip-link:focus,
 .skip-link:focus-visible {
   top: 0;
+}
+
+/* === Texto solo para lectores de pantalla (mantiene icon-only visible) === */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* === Redes profesionales (iconos SVG inline) === */
@@ -714,6 +728,16 @@ section {
 .contact p {
   text-align: center;
   margin: 0 auto var(--space-lg);
+}
+
+.contact-alt {
+  text-align: center;
+  color: var(--slate);
+  font-size: 0.9rem;
+  margin-top: var(--space-lg);
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact form {

@@ -1,6 +1,6 @@
 # PFO1 · Landing de portafolio personal
 
-**Desarrollo de Sistemas Web · Front End · 2026 · 4to semestre**
+**Desarrollo de Sistemas Web · Front End · 2026 · 4to cuatrimestre**
 
 Landing estática personal para la entrega individual PFO1. Construida con HTML semántico y CSS propio, desplegada en Vercel.
 
@@ -42,4 +42,12 @@ Herramientas utilizadas:
 - `hy3` y `ox alpha` — plan **gratuito** de [opencode](https://opencode.ai).
 - `Kimi Code` — suscripción **de pago**.
 
-Cada línea fue revisada y adaptada con criterio propio antes de publicar: estructura semántica, sistema de diseño, textos y decisiones de accesibilidad son autoría mía; la IA fue la herramienta de iteración, no la autora.
+**Para qué las usé (trazabilidad por herramienta):**
+
+- **hy3 (opencode, gratuito)** → andamiaje inicial HTML semántico (`header/nav/main/footer`, `skip-link`, jerarquía `h1→h4`) y preguntas sobre roles ARIA. Prompt base: _"armá el esqueleto HTML semántico PFO1 con 5 secciones y comentarios explicativos"_. Descarté un `nav` con `role="menubar"` que propuso y lo dejé en `navigation` simple.
+- **ox alpha (opencode, gratuito)** → sistema de diseño `ev_` con variables CSS y `grid-template-rows: 0fr→1fr` para el acordeón sin JS. Prompt: _"pasá el acordeón de habilidades a CSS puro sin JS, accesible con teclado"_. Reescribí el `visibility` sync y el `counter` de líneas para contraste 4.5:1.
+- **Kimi Code (de pago)** → refinamiento responsive y pulido visual (clamp, `scroll-padding`, full-bleed en móvil `639px`, estados `current/done` en educación). Prompt: _"revisá responsive mobile-first y proponé 2 breakpoints máximo"_. Rechacé una propuesta con 4 breakpoints y otra con JS para el árbol.
+
+**Experiencia previa:** uso diario de agentes en flujo de ingeniería (skills, MCP, `rtk`); esta PFO es el primer uso documentado para entregar con trazabilidad académica.
+
+**Qué revisé/cambié con criterio propio:** estructura semántica final, paleta `ev_` (`#020617/#d4a017/#94a3b8`), todos los textos (bio honesta desde 2021, camino verificable), decisiones de accesibilidad y simplificación ponytail (quitar sobre-ingeniería, dejar `0fr` en lugar de librería). Cada línea fue revisada y adaptada antes de publicar: la IA fue herramienta de iteración, no autora.
