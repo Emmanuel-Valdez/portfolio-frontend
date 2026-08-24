@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Emmanuel Valdez · Backend .NET en formación · C#, ASP.NET Core, SQL y proyectos desplegados desde 2021." />
   <title>ev_ · Emmanuel Valdez</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +15,7 @@
   <!-- Enlace para saltar la navegación y llegar directo al contenido principal -->
   <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-  <!-- Cabecera: marca ev_ con cursor parpadeante y navegación principal -->
+  <!-- Cabecera: marca ev_ con cursor parpadeante, navegación y redes profesionales -->
   <header class="site-header" role="banner">
     <div class="brand">
       <a href="#inicio" aria-label="Inicio">
@@ -26,10 +27,27 @@
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#camino">Camino</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
+    <ul class="social-links" aria-label="Redes profesionales">
+      <li>
+        <a href="https://github.com/Emmanuel-Valdez" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Emmanuel Valdez">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.998.108-.776.42-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.807 5.625-5.48 5.92.43.372.815 1.103.815 2.222 0 1.606-.015 2.898-.015 3.293 0 .32.21.694.825.577C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://linkedin.com/in/evaldezdev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Emmanuel Valdez">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
   </header>
 
   <!-- Contenido principal: inicia después del encabezado -->
@@ -38,83 +56,285 @@
     <!-- Sección de inicio / hero -->
     <section id="inicio" class="hero">
       <h1>ev_<span class="cursor" aria-hidden="true">_</span> Emmanuel Valdez</h1>
-      <p class="lead">Estudiante de Desarrollo de Sistemas Web · Aprendiendo en público</p>
+      <p class="lead">Backend .NET en formación · C# · ASP.NET Core · SQL</p>
+      <div class="hero-actions">
+        <a class="btn btn--primary" href="#proyectos">Ver proyectos</a>
+        <a class="btn btn--ghost" href="#contacto">Contactarme</a>
+      </div>
     </section>
 
     <!-- Sección Sobre mí: foto y biografía honesta -->
     <section id="sobre-mi" class="about">
       <h2>Sobre mí</h2>
       <div class="about-content">
-        <img src="Emma.png" alt="Foto de Emmanuel Valdez, estudiante de desarrollo web" width="320" height="320" loading="lazy" />
+        <img src="Emma.png" alt="Foto de Emmanuel Valdez, desarrollador backend .NET" width="320" height="320" loading="lazy" />
         <div class="about-text">
           <p>
-            Empecé a programar en 2021 con Java, curioseando por mi cuenta y haciendo pequeños proyectos.
-            Después hice cursos de desarrollo fullstack y seguí con React. Hoy estoy en el 4to semestre de la
-            Tecnicatura en Desarrollo de Sistemas Web.
+            Programo desde 2021. Empecé con Java de forma autodidacta, seguí con desarrollo web full stack
+            (Node.js, React) y hoy mi foco está en el backend con C# y ASP.NET Core. Curso la Tecnicatura
+            Superior en Desarrollo de Software en el IFTS N° 29.
           </p>
           <p>
-            Esta landing es la PFO1 de Front End. La armé con ayuda de agentes de IA (Kimi Code, hy3 y ox alpha)
-            y revisé el resultado con mi criterio para mantener una voz honesta: no me vendo como profesional,
-            solo muestro por dónde voy aprendiendo.
+            Antes pasé por la Tecnicatura en Producción Industrial y Automatización (ITU UNCuyo): ahí aprendí
+            a analizar procesos y resolver problemas técnicos con criterio de sistema, algo que uso todos los días
+            cuando diseño software.
+          </p>
+          <p>
+            No me vendo como senior: construyo proyectos reales de base de datos a despliegue y muestro el camino.
+            Esta landing es la PFO1 de Front End; la armé con HTML y CSS propios, iterando con agentes de IA
+            y revisando cada decisión con mi criterio.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Sección Habilidades: grilla de tarjetas con tecnologías reales -->
+    <!-- Sección Habilidades: stack organizado como explorador de archivos -->
     <section id="habilidades" class="skills">
       <h2>Habilidades</h2>
-      <div class="skills-grid">
-        <article class="skill-card">HTML</article>
-        <article class="skill-card">CSS</article>
-        <article class="skill-card">Flexbox / Grid</article>
-        <article class="skill-card">Responsive</article>
-        <article class="skill-card">Java</article>
-        <article class="skill-card">JavaScript</article>
-        <article class="skill-card">React</article>
-        <article class="skill-card">Fullstack</article>
-        <article class="skill-card">ASP.NET</article>
-        <article class="skill-card">PostgreSQL</article>
-        <article class="skill-card">Docker</article>
-        <article class="skill-card">Git / GitHub</article>
+      <p class="skills-intro">Mi stack, organizado como lo veo todos los días: en el explorador.</p>
+
+      <!-- Sprite de íconos (SVG puro, sin dependencias) -->
+      <svg class="tree-sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-folder" viewBox="0 0 24 24">
+          <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="i-folder-open" viewBox="0 0 24 24">
+          <path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="i-file" viewBox="0 0 24 24">
+          <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 2v4a2 2 0 0 0 2 2h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+      </svg>
+
+      <div class="tree">
+        <ul>
+          <li class="tree-item">
+            <input type="checkbox" id="folder-frontend" class="tree-toggle" checked />
+            <label class="tree-label" for="folder-frontend">
+              <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
+              <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
+              Frontend
+            </label>
+            <div class="tree-children-wrapper">
+              <ul class="tree-children">
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>HTML</span></li>
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>CSS</span></li>
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Flexbox / Grid</span></li>
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Responsive</span></li>
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>React</span></li>
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Astro</span></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tree-item">
+            <input type="checkbox" id="folder-backend" class="tree-toggle" checked />
+            <label class="tree-label" for="folder-backend">
+              <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
+              <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
+              Backend y datos
+            </label>
+            <div class="tree-children-wrapper">
+              <ul class="tree-children">
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>C#</span></li>
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>ASP.NET Core MVC / Web API</span></li>
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>EF Core</span></li>
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Java</span></li>
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Node.js / Express</span></li>
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>PostgreSQL / SQL Server</span></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tree-item">
+            <input type="checkbox" id="folder-devops" class="tree-toggle" checked />
+            <label class="tree-label" for="folder-devops">
+              <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
+              <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
+              DevOps y herramientas
+            </label>
+            <div class="tree-children-wrapper">
+              <ul class="tree-children">
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Docker</span></li>
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Git / GitHub</span></li>
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Stripe</span></li>
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Identity / RBAC</span></li>
+                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Nginx</span></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <!-- Sección Mi camino de aprendizaje: timeline personal 2021-2026 -->
-    <section id="camino" class="timeline">
-      <h2>Mi camino de aprendizaje</h2>
-      <ol class="timeline-list">
-        <li class="timeline-item">
-          <time datetime="2021">2021</time>
-          <p>Primeros pasos programando con Java.</p>
-        </li>
-        <li class="timeline-item">
-          <time datetime="2022">2022</time>
-          <p>Cursos de desarrollo web fullstack.</p>
-        </li>
-        <li class="timeline-item">
-          <time datetime="2023">2023</time>
-          <p>Profundicé en React y proyectos personales.</p>
-        </li>
-        <li class="timeline-item">
-          <time datetime="2024">2024</time>
-          <p>Ingreso a la Tecnicatura en Desarrollo de Sistemas Web.</p>
-        </li>
-        <li class="timeline-item">
-          <time datetime="2025">2025</time>
-          <p>3er semestre, práctica con bases de datos y APIs.</p>
-        </li>
-        <li class="timeline-item">
-          <time datetime="2026">2026</time>
-          <p>4to semestre + PFO1 armada con agentes de IA.</p>
-        </li>
-      </ol>
+    <!-- Sección Proyectos: trabajos reales desplegados -->
+    <section id="proyectos" class="projects">
+      <h2>Proyectos</h2>
+      <div class="projects-grid">
+        <article class="project-card project-card--featured">
+          <div class="project-body">
+            <h3>VaultShop</h3>
+            <p>
+              E-commerce fullstack como caso de estudio de producción: catálogo, carrito y pagos,
+              desde la base de datos hasta el deploy en VPS Ubuntu con HTTPS.
+            </p>
+            <ul class="project-tags">
+              <li>ASP.NET Core 8</li>
+              <li>EF Core</li>
+              <li>PostgreSQL</li>
+              <li>Docker Compose</li>
+              <li>Stripe</li>
+              <li>Nginx</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://vaultshop.evaldez.ar" target="_blank" rel="noopener noreferrer">Demo en vivo</a>
+              <a href="https://github.com/Emmanuel-Valdez/VaultShop" target="_blank" rel="noopener noreferrer">Código</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-body">
+            <h3>Portfolio evaldez.ar</h3>
+            <p>Mi portfolio backend .NET, construido con Astro enfocado en rendimiento y contenido estático.</p>
+            <ul class="project-tags">
+              <li>Astro</li>
+              <li>Tailwind CSS</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://evaldez.ar" target="_blank" rel="noopener noreferrer">Demo en vivo</a>
+              <a href="https://github.com/Emmanuel-Valdez/Emmanuel-Valdez" target="_blank" rel="noopener noreferrer">Código</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-body">
+            <h3>Fullstack Project · Codo a Codo</h3>
+            <p>Trabajo final grupal del curso Full Stack Node.js: API y frontend con plantillas servidor.</p>
+            <ul class="project-tags">
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>EJS</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/Emmanuel-Valdez/fullstackproject-backend" target="_blank" rel="noopener noreferrer">Código</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección Camino: educación formal + certificaciones agrupadas por año -->
+    <section id="camino" class="camino">
+      <h2>Mi camino</h2>
+      <div class="camino-layout">
+        <div class="camino-block">
+          <h3>Educación formal</h3>
+          <ol class="edu-list">
+            <li class="edu-card edu-card--current">
+              <div class="edu-header">
+                <h4>Tecnicatura Superior en Desarrollo de Software</h4>
+                <span class="status status--current">En curso</span>
+              </div>
+              <p class="edu-org">IFTS N° 29 · <time datetime="2025">2025</time> – presente</p>
+              <p class="edu-topics">Desarrollo de software, bases de datos, POO, ingeniería de software, análisis de sistemas, arquitectura.</p>
+            </li>
+            <li class="edu-card">
+              <div class="edu-header">
+                <h4>Técnico Universitario en Producción Industrial y Automatización</h4>
+                <span class="status status--done">Completado</span>
+              </div>
+              <p class="edu-org">ITU UNCuyo · 2017 – 2023</p>
+              <p class="edu-topics">Producción industrial, planificación y control de procesos, automatización.</p>
+            </li>
+          </ol>
+        </div>
+        <div class="camino-block">
+          <h3>Certificaciones y cursos</h3>
+          <div class="cert-grid">
+            <article class="cert-group">
+              <h4 class="cert-year">2026</h4>
+              <ul class="cert-list">
+                <li>
+                  <p class="cert-name">Talento Tech – Desarrollo de Interfaces Web</p>
+                  <p class="cert-meta">Microcredencial Front End Developer · Ministerio de Educación CABA · vigente 2026–2028</p>
+                </li>
+              </ul>
+            </article>
+            <article class="cert-group">
+              <h4 class="cert-year">2024</h4>
+              <ul class="cert-list">
+                <li>
+                  <p class="cert-name">React JS</p>
+                  <p class="cert-meta">Agencia de Habilidades para el Futuro / Codo a Codo · feb – may 2024</p>
+                </li>
+              </ul>
+            </article>
+            <article class="cert-group">
+              <h4 class="cert-year">2023</h4>
+              <ul class="cert-list">
+                <li>
+                  <p class="cert-name">.NET Core MVC – Complete Guide [E-commerce] [.NET 8]</p>
+                  <p class="cert-meta">Bhrugen Patel · Udemy · dic 2023</p>
+                </li>
+                <li>
+                  <p class="cert-name">Web APIs (.NET) – Guía Completa</p>
+                  <p class="cert-meta">Bhrugen Patel / Carlos Piedra · Udemy · sep 2023</p>
+                </li>
+                <li>
+                  <p class="cert-name">Foundational C# with Microsoft</p>
+                  <p class="cert-meta">freeCodeCamp · nov 2023</p>
+                </li>
+                <li>
+                  <p class="cert-name">Programación Web Full Stack – Node.js</p>
+                  <p class="cert-meta">Agencia de Habilidades para el Futuro / Codo a Codo · ago – dic 2023</p>
+                </li>
+                <li>
+                  <p class="cert-name">Testing avanzado</p>
+                  <p class="cert-meta">UTN / Argentina Programa 4.0 · nov 2023</p>
+                </li>
+                <li>
+                  <p class="cert-name">Desarrollo de Aplicaciones Móviles</p>
+                  <p class="cert-meta">TICMAS Academy / Argentina Programa 4.0 · sep 2023</p>
+                </li>
+              </ul>
+            </article>
+            <article class="cert-group">
+              <h4 class="cert-year">2022 – 2023</h4>
+              <ul class="cert-list">
+                <li>
+                  <p class="cert-name">C# / Unity</p>
+                  <p class="cert-meta">Quark Academy</p>
+                </li>
+              </ul>
+            </article>
+            <article class="cert-group">
+              <h4 class="cert-year">2021</h4>
+              <ul class="cert-list">
+                <li>
+                  <p class="cert-name">Programación Web Full Stack (Java, MySQL)</p>
+                  <p class="cert-meta">Egg + Gobierno de Mendoza · jun – nov 2021</p>
+                </li>
+              </ul>
+            </article>
+            <article class="cert-group">
+              <h4 class="cert-year">Otros</h4>
+              <ul class="cert-list">
+                <li>
+                  <p class="cert-name">Primeros pasos del desarrollo frontend</p>
+                  <p class="cert-meta">Argentina Programa 4.0</p>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Sección Contacto: formulario accesible sin backend -->
     <section id="contacto" class="contact">
       <h2>Contacto</h2>
-      <p>Si querés escribirme, completá el formulario. Se abrirá tu cliente de correo.</p>
+      <p>¿Tenés una consulta, una propuesta o un proyecto? Escribime: completá el formulario y se abrirá tu cliente de correo.</p>
       <form action="mailto:contact@evaldez.ar" method="post" enctype="text/plain">
         <div class="form-group">
           <label for="name">Nombre</label>
@@ -134,12 +354,25 @@
 
   </main>
 
-  <!-- Pie de página: enlace visible a GitHub, año y firma -->
+  <!-- Pie de página: redes con iconos, año y firma ev_ -->
   <footer class="site-footer" role="contentinfo">
-    <p>
-      <a href="https://github.com/Emmanuel-Valdez" target="_blank" rel="noopener noreferrer">GitHub: Emmanuel-Valdez</a>
-      · 2026 · ev_<span aria-hidden="true">_</span>
-    </p>
+    <ul class="social-links social-links--footer" aria-label="Redes profesionales">
+      <li>
+        <a href="https://github.com/Emmanuel-Valdez" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Emmanuel Valdez">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.998.108-.776.42-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.807 5.625-5.48 5.92.43.372.815 1.103.815 2.222 0 1.606-.015 2.898-.015 3.293 0 .32.21.694.825.577C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://linkedin.com/in/evaldezdev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Emmanuel Valdez">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <p>© 2026 Emmanuel Valdez · ev_<span aria-hidden="true">_</span></p>
   </footer>
 </body>
 </html>

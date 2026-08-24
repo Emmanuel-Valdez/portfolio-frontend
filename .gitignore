@@ -15,6 +15,8 @@ $RECYCLE.BIN/
 # .kimi-code/ y .opencode/ quedan ignorados: pueden contener datos de sesión.
 .opencode/
 .kimi-code/
+skills-lock.json
+skills/
 
 # Build / deps
 node_modules/
