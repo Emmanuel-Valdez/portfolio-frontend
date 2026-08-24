@@ -271,7 +271,7 @@ section {
   margin-top: var(--space-md);
 }
 
-/* === Habilidades: explorador de stack (file-tree) === */
+/* === Habilidades: ventana de editor con árbol de archivos === */
 .skills-intro {
   color: var(--slate);
   text-align: center;
@@ -282,13 +282,69 @@ section {
   display: none;
 }
 
-.tree {
-  width: min(100%, 22rem);
+/* --- Chrome de la ventana de editor --- */
+.editor-window {
+  width: min(100%, 48rem);
   margin: 0 auto;
-  background-color: var(--navy-light);
+  background-color: var(--navy); /* el cuerpo del editor invierte el fondo de la página */
   border: 1px solid rgba(148, 163, 184, 0.2);
   border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.editor-titlebar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background-color: var(--navy-light);
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+/* Puntos de tráfico: puramente decorativos */
+.editor-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+
+.editor-dot--red { background-color: #ff5f57; }
+.editor-dot--yellow { background-color: #febc2e; }
+.editor-dot--green { background-color: #28c840; }
+
+/* Título inerte: texto plano, sin apariencia de pestaña ni botón */
+.editor-title {
+  color: var(--slate);
+  font-size: 0.8rem;
+}
+
+/* Migas de pan: describen la ubicación real dentro del sitio */
+.editor-breadcrumb {
+  color: var(--slate);
+  font-size: 0.8rem;
+  padding: var(--space-sm) var(--space-lg) 0;
+}
+
+/* Barra de estado: solo datos reales del árbol */
+.editor-statusbar {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--navy-light);
+  color: var(--slate);
+  font-size: 0.75rem;
+  padding: var(--space-xs) var(--space-md);
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.editor-statusbar span + span::before {
+  content: "·";
+  margin: 0 0.5em;
+}
+
+/* --- Árbol de archivos --- */
+.tree {
   padding: var(--space-lg);
+  counter-reset: linea;
 }
 
 .tree ul {
@@ -358,6 +414,11 @@ section {
 .file-item {
   font-size: 0.85rem;
   color: var(--slate);
+  transition: background-color 200ms ease;
+}
+
+.file-item:hover {
+  background-color: rgba(148, 163, 184, 0.08);
 }
 
 .icon {
@@ -380,6 +441,52 @@ section {
 .tree-toggle:checked ~ .tree-label .folder-open-icon { display: block; }
 .tree-toggle:checked ~ .tree-label .folder-closed-icon { display: none; }
 
+/* Gutér de líneas: numeración consecutiva solo de las filas visibles (contraste ≥4.5:1 sobre navy) */
+.tree-label::before,
+.file-item::before {
+  flex-shrink: 0;
+  min-width: 2ch;
+  text-align: right;
+  color: rgba(148, 163, 184, 0.85);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.tree > ul > .tree-item > .tree-label::before,
+.tree-toggle:checked ~ .tree-children-wrapper > .tree-children > .tree-item > .tree-label::before,
+.tree-toggle:checked ~ .tree-children-wrapper > .tree-children > .tree-item > .file-item::before,
+.tree-toggle:checked ~ .tree-children-wrapper .tree-toggle:checked ~ .tree-children-wrapper > .tree-children > .tree-item > .file-item::before {
+  counter-increment: linea;
+  content: counter(linea, decimal-leading-zero);
+}
+
+/* Contador de ítems: visible solo con la carpeta cerrada */
+.tree-count {
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--slate);
+  background-color: rgba(148, 163, 184, 0.15);
+  padding: 0.25em 0.6em;
+  border-radius: 999px;
+}
+
+.tree-toggle:checked ~ .tree-label .tree-count { display: none; }
+
+/* Caret: ▸ gira a ▾ al abrir la carpeta */
+.tree-label::after {
+  content: "▸";
+  margin-left: auto;
+  font-size: 0.7rem;
+  color: var(--slate);
+  transition: transform 200ms ease, color 200ms ease;
+}
+
+.tree-toggle:checked ~ .tree-label::after {
+  transform: rotate(90deg);
+  color: var(--gold);
+}
+
 /* Acordeón animado: 0fr → 1fr */
 .tree-children-wrapper {
   display: grid;
@@ -387,9 +494,19 @@ section {
   transition: grid-template-rows 300ms ease-in-out;
 }
 
-.tree-children { overflow: hidden; }
-
 .tree-toggle:checked ~ .tree-children-wrapper { grid-template-rows: 1fr; }
+
+/* Fix de foco: lo colapsado también es invisible para el teclado, sincronizado con la animación
+   (visibility pasa a hidden recién al terminar la transición y vuelve a visible al iniciar) */
+.tree-children {
+  overflow: hidden;
+  visibility: hidden;
+  transition: visibility 300ms ease-in-out;
+}
+
+.tree-toggle:checked ~ .tree-children-wrapper > .tree-children {
+  visibility: visible;
+}
 
 /* === Proyectos === */
 .projects-grid {
@@ -702,6 +819,47 @@ button[type="submit"]:active {
 
   .cert-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 639px) {
+  /* Ventana a sangre completa en móvil */
+  .editor-window {
+    width: calc(100% + 2 * var(--space-md));
+    margin-left: calc(-1 * var(--space-md));
+    margin-right: calc(-1 * var(--space-md));
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+
+  .editor-breadcrumb {
+    padding: var(--space-xs) var(--space-md) 0;
+  }
+
+  .tree {
+    padding: var(--space-md);
+  }
+
+  /* Menos sangría entre niveles y gutér más angosto */
+  .tree ul ul {
+    margin-left: 6px;
+    padding-left: 6px;
+  }
+
+  .tree ul ul .tree-item::before {
+    left: -6px;
+    width: 6px;
+  }
+
+  .tree-label::before,
+  .file-item::before {
+    min-width: 1.5rem;
+  }
+
+  /* La barra de estado suelta su último segmento */
+  .editor-statusbar span:last-child {
+    display: none;
   }
 }
 

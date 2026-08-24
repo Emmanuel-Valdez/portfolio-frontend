@@ -88,7 +88,7 @@
       </div>
     </section>
 
-    <!-- Sección Habilidades: stack organizado como explorador de archivos -->
+    <!-- Sección Habilidades: stack organizado como ventana de editor con árbol de archivos -->
     <section id="habilidades" class="skills">
       <h2>Habilidades</h2>
       <p class="skills-intro">Mi stack, organizado como lo veo todos los días: en el explorador.</p>
@@ -107,64 +107,202 @@
         </symbol>
       </svg>
 
-      <div class="tree">
-        <ul>
-          <li class="tree-item">
-            <input type="checkbox" id="folder-frontend" class="tree-toggle" checked />
-            <label class="tree-label" for="folder-frontend">
-              <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
-              <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
-              Frontend
-            </label>
-            <div class="tree-children-wrapper">
-              <ul class="tree-children">
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>HTML</span></li>
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>CSS</span></li>
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Flexbox / Grid</span></li>
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Responsive</span></li>
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>React</span></li>
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Astro</span></li>
-              </ul>
-            </div>
-          </li>
+      <!-- Ventana de editor: el chrome (puntos, título, migas) es decorativo; los datos de la barra de estado son reales -->
+      <div class="editor-window">
+        <div class="editor-titlebar">
+          <span class="editor-dot editor-dot--red" aria-hidden="true"></span>
+          <span class="editor-dot editor-dot--yellow" aria-hidden="true"></span>
+          <span class="editor-dot editor-dot--green" aria-hidden="true"></span>
+          <span class="editor-title">ev_ — habilidades.tree</span>
+        </div>
 
-          <li class="tree-item">
-            <input type="checkbox" id="folder-backend" class="tree-toggle" checked />
-            <label class="tree-label" for="folder-backend">
-              <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
-              <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
-              Backend y datos
-            </label>
-            <div class="tree-children-wrapper">
-              <ul class="tree-children">
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>C#</span></li>
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>ASP.NET Core MVC / Web API</span></li>
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>EF Core</span></li>
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Java</span></li>
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Node.js / Express</span></li>
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>PostgreSQL / SQL Server</span></li>
-              </ul>
-            </div>
-          </li>
+        <!-- Migas de pan: describen la ubicación real dentro del sitio -->
+        <p class="editor-breadcrumb" aria-hidden="true">portfolio › habilidades ›</p>
 
-          <li class="tree-item">
-            <input type="checkbox" id="folder-devops" class="tree-toggle" checked />
-            <label class="tree-label" for="folder-devops">
-              <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
-              <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
-              DevOps y herramientas
-            </label>
-            <div class="tree-children-wrapper">
-              <ul class="tree-children">
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Docker</span></li>
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Git / GitHub</span></li>
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Stripe</span></li>
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Identity / RBAC</span></li>
-                <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Nginx</span></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+        <div class="tree">
+          <ul>
+            <!-- Carpetas raíz: abiertas por defecto para que se vean las subcarpetas -->
+            <li class="tree-item">
+              <input type="checkbox" id="folder-frontend" class="tree-toggle" checked />
+              <label class="tree-label" for="folder-frontend">
+                <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
+                <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
+                frontend
+                <span class="tree-count">6</span>
+              </label>
+              <div class="tree-children-wrapper">
+                <ul class="tree-children">
+                  <!-- Subcarpetas: empiezan colapsadas para invitar a explorar -->
+                  <li class="tree-item">
+                    <input type="checkbox" id="folder-frontend-fundamentos" class="tree-toggle" />
+                    <label class="tree-label" for="folder-frontend-fundamentos">
+                      <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
+                      <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
+                      fundamentos
+                      <span class="tree-count">4</span>
+                    </label>
+                    <div class="tree-children-wrapper">
+                      <ul class="tree-children">
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>HTML</span></li>
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>CSS</span></li>
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Flexbox / Grid</span></li>
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Responsive</span></li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="tree-item">
+                    <input type="checkbox" id="folder-frontend-frameworks" class="tree-toggle" />
+                    <label class="tree-label" for="folder-frontend-frameworks">
+                      <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
+                      <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
+                      frameworks
+                      <span class="tree-count">2</span>
+                    </label>
+                    <div class="tree-children-wrapper">
+                      <ul class="tree-children">
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>React</span></li>
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Astro</span></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="tree-item">
+              <input type="checkbox" id="folder-backend" class="tree-toggle" checked />
+              <label class="tree-label" for="folder-backend">
+                <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
+                <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
+                backend-y-datos
+                <span class="tree-count">6</span>
+              </label>
+              <div class="tree-children-wrapper">
+                <ul class="tree-children">
+                  <li class="tree-item">
+                    <input type="checkbox" id="folder-backend-lenguajes" class="tree-toggle" />
+                    <label class="tree-label" for="folder-backend-lenguajes">
+                      <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
+                      <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
+                      lenguajes
+                      <span class="tree-count">3</span>
+                    </label>
+                    <div class="tree-children-wrapper">
+                      <ul class="tree-children">
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>C#</span></li>
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Java</span></li>
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>JavaScript</span></li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="tree-item">
+                    <input type="checkbox" id="folder-backend-web" class="tree-toggle" />
+                    <label class="tree-label" for="folder-backend-web">
+                      <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
+                      <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
+                      web
+                      <span class="tree-count">2</span>
+                    </label>
+                    <div class="tree-children-wrapper">
+                      <ul class="tree-children">
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>ASP.NET Core MVC / Web API</span></li>
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Node.js / Express</span></li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="tree-item">
+                    <input type="checkbox" id="folder-backend-datos" class="tree-toggle" />
+                    <label class="tree-label" for="folder-backend-datos">
+                      <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
+                      <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
+                      datos
+                      <span class="tree-count">2</span>
+                    </label>
+                    <div class="tree-children-wrapper">
+                      <ul class="tree-children">
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>EF Core</span></li>
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>PostgreSQL / SQL Server</span></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="tree-item">
+              <input type="checkbox" id="folder-devops" class="tree-toggle" checked />
+              <label class="tree-label" for="folder-devops">
+                <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
+                <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
+                devops-y-herramientas
+                <span class="tree-count">8</span>
+              </label>
+              <div class="tree-children-wrapper">
+                <ul class="tree-children">
+                  <li class="tree-item">
+                    <input type="checkbox" id="folder-devops-deploy" class="tree-toggle" />
+                    <label class="tree-label" for="folder-devops-deploy">
+                      <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
+                      <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
+                      deploy
+                      <span class="tree-count">4</span>
+                    </label>
+                    <div class="tree-children-wrapper">
+                      <ul class="tree-children">
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Docker</span></li>
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Nginx</span></li>
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Oracle</span></li>
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Tailscale</span></li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="tree-item">
+                    <input type="checkbox" id="folder-devops-colaboracion" class="tree-toggle" />
+                    <label class="tree-label" for="folder-devops-colaboracion">
+                      <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
+                      <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
+                      colaboracion
+                      <span class="tree-count">1</span>
+                    </label>
+                    <div class="tree-children-wrapper">
+                      <ul class="tree-children">
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Git / GitHub</span></li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="tree-item">
+                    <input type="checkbox" id="folder-devops-seguridad" class="tree-toggle" />
+                    <label class="tree-label" for="folder-devops-seguridad">
+                      <svg class="icon folder-open-icon" aria-hidden="true"><use href="#i-folder-open" /></svg>
+                      <svg class="icon folder-closed-icon" aria-hidden="true"><use href="#i-folder" /></svg>
+                      seguridad-y-pagos
+                      <span class="tree-count">3</span>
+                    </label>
+                    <div class="tree-children-wrapper">
+                      <ul class="tree-children">
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Identity / RBAC</span></li>
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Mercado Pago</span></li>
+                        <li class="tree-item"><span class="file-item"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg>Stripe</span></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Barra de estado: cifras contadas sobre el marcado final -->
+        <p class="editor-statusbar">
+          <span>11 carpetas</span>
+          <span>21 tecnologías</span>
+          <span>HTML + CSS puro</span>
+        </p>
       </div>
     </section>
 
@@ -209,15 +347,41 @@
         </article>
         <article class="project-card">
           <div class="project-body">
-            <h3>Fullstack Project · Codo a Codo</h3>
-            <p>Trabajo final grupal del curso Full Stack Node.js: API y frontend con plantillas servidor.</p>
+            <h3>UkiyoStudio</h3>
+            <p>
+              Tienda real en producción sobre la misma plataforma que VaultShop: base de datos y bucket de
+              imágenes propios, backups diarios y pagos con Mercado Pago y transferencia.
+            </p>
             <ul class="project-tags">
-              <li>Node.js</li>
-              <li>Express</li>
-              <li>EJS</li>
+              <li>ASP.NET Core 8</li>
+              <li>PostgreSQL</li>
+              <li>MinIO</li>
+              <li>Docker Compose</li>
+              <li>Mercado Pago</li>
             </ul>
             <div class="project-links">
-              <a href="https://github.com/Emmanuel-Valdez/fullstackproject-backend" target="_blank" rel="noopener noreferrer">Código</a>
+              <a href="https://ukiyostudio.evaldez.ar" target="_blank" rel="noopener noreferrer">Demo en vivo</a>
+              <a href="https://github.com/Emmanuel-Valdez/VaultShop" target="_blank" rel="noopener noreferrer">Código e infraestructura</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-body">
+            <h3>Pastelería Ivanna</h3>
+            <p>
+              Landing para una pastelería casera de Mendoza: catálogo de tortas manejado con Content
+              Collections, fotos optimizadas a WebP y conversión por WhatsApp, con deploy automático al VPS.
+            </p>
+            <ul class="project-tags">
+              <li>Astro</li>
+              <li>TypeScript</li>
+              <li>Tailwind CSS</li>
+              <li>Docker</li>
+              <li>Nginx</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://pasteleriaivanna.evaldez.ar" target="_blank" rel="noopener noreferrer">Demo en vivo</a>
+              <a href="https://github.com/Emmanuel-Valdez/Pasteleria_Ivanna" target="_blank" rel="noopener noreferrer">Código</a>
             </div>
           </div>
         </article>
